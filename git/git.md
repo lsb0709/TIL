@@ -232,7 +232,7 @@ $ git status
 
 $ git add .
 
-$ git commit -m '예시 만듬'
+$ git commit -m '커밋 메세지'
 
 $ git log --oneline #작업한 로그 확인
 
