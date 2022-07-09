@@ -2,6 +2,6 @@
 
 ## 목차
 
-*[git](./git)
+* [git](./git)
 
-*[마크다운](./markdown)
+* [마크다운](./markdown)
