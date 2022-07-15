@@ -13,7 +13,7 @@
 
 
 
-<img src="/Users/isangbaeg/Desktop/TIL/python/image/스크린샷 2022-07-15 오후 9.08.24.png" alt="스크린샷 2022-07-15 오후 9.08.24" style="zoom:50%;" />
+<img src="/Desktop/TIL/python/image/스크린샷 2022-07-15 오후 9.08.24.png" alt="스크린샷 2022-07-15 오후 9.08.24" style="zoom:50%;" />
 
 - expression에는 참/거짓에 대한 조건식
   - 조건이참인경우이후들여쓰기되어있는코드블럭을실행 • 이외의경우else이후들여쓰기되어있는코드블럭을실행
