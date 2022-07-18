@@ -17,8 +17,7 @@
     return returning_value
 ```
 
-<img src="/Users/isangbaeg/Desktop/TIL/python/images/python03 -1.png" alt="python03 -1" style="zoom:50%;" />
-
+![python03-1](images/python03-1.png)
 
 
 - 내장함수(Built-in Function) 활용
@@ -41,7 +40,8 @@ statistics.pstdev(values)
 # 코드 중복 방지 재사용 용이
 ```
 
-<img src="/Users/isangbaeg/Desktop/TIL/python/images/python03-2.png" alt="python03-2" style="zoom:50%;" />
+![python03-2](images/python03-2.png)
+
 
 https://github.com/python/cpython/blob/main/Lib/statistics.py#L840
 
@@ -150,7 +150,8 @@ def add(x, y=0): add(2)
   return x + y
 ````
 
-<img src="/Users/isangbaeg/Desktop/TIL/python/image/python03-3.png" alt="python03-3" style="zoom:50%;" />
+![python03-3](images/python03-3.png)
+
 
 #### 정해지지 않은 개수의 arguments
 
@@ -210,7 +211,8 @@ family(father='John', mother='Jane', me='John Jr.')
   - Global scope : 함수 밖의 변수, Import 모듈
   - Built-inscope:파이썬안에내장되어있는함수또는속성
 
-<img src="/Users/isangbaeg/Desktop/TIL/python/images/python03-4.png" alt="python03-4" style="zoom: 33%;" />
+![python03-4](images/python03-4.png)
+
 
 
 
@@ -222,7 +224,8 @@ family(father='John', mother='Jane', me='John Jr.')
 
 - 파이썬 인터프리터에는 사용할 수 있는 많은 함수와 형(type)이 내장되어 있음
 
-<img src="/Users/isangbaeg/Desktop/TIL/python/images/python03-5.png" alt="python03-5" style="zoom:50%;" />
+![python03-5](images/python03-5.png)
+
 
 #### map
 
