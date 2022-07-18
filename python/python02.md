@@ -11,9 +11,7 @@
 
 - 조건문은 참/거짓을 판단할 수 있는 조건식과 함께 사용
 
-
-
-<img src="/Desktop/TIL/python/image/스크린샷 2022-07-15 오후 9.08.24.png" alt="스크린샷 2022-07-15 오후 9.08.24" style="zoom:50%;" />
+![python02-1](images/python02-1.png)
 
 - expression에는 참/거짓에 대한 조건식
   - 조건이참인경우이후들여쓰기되어있는코드블럭을실행 • 이외의경우else이후들여쓰기되어있는코드블럭을실행
@@ -61,7 +59,7 @@ else:
 - 반복문 (Loop Statement)
   - 특정 조건을 도달할 때까지, 계속 반복되는 일련의 문장
 
-<img src="/Users/isangbaeg/Desktop/TIL/python/image/스크린샷 2022-07-15 오후 9.15.33.png" alt="스크린샷 2022-07-15 오후 9.15.33" style="zoom:50%;" />
+![python02-2](images/python02-2.png)
 
 #### 반복문의 종류
 
@@ -121,7 +119,7 @@ for i in range(len(members)):
 
 - 파이썬 문서에서 확인하기
 
-<img src="/Users/isangbaeg/Desktop/TIL/python/image/스크린샷 2022-07-15 오후 9.21.56.png" alt="스크린샷 2022-07-15 오후 9.21.56" style="zoom:50%;" />
+![python02-3](images/python02-3.png)
 
 ###### 딕셔너리 순회
 
@@ -152,7 +150,7 @@ for name in grades:
 
 ### 기본형식
 
-<img src="/Users/isangbaeg/Desktop/TIL/python/image/스크린샷 2022-07-15 오후 9.26.44.png" alt="스크린샷 2022-07-15 오후 9.26.44" style="zoom:50%;" />
+![python02-4](images/python02-4.png)
 
 #### break
 
