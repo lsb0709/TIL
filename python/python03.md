@@ -17,7 +17,7 @@
     return returning_value
 ```
 
-<img src="/Users/isangbaeg/Desktop/TIL/python/image/python03 -1.png" alt="python03 -1" style="zoom:50%;" />
+<img src="/Users/isangbaeg/Desktop/TIL/python/image/python03 -1.png" alt="python03 -1"/>
 
 
 
