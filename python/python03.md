@@ -17,7 +17,7 @@
     return returning_value
 ```
 
-![python03-1](images/python03-1.png)
+![python03-1](images/python03 -1.png)
 
 
 - 내장함수(Built-in Function) 활용
