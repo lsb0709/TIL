@@ -15,14 +15,13 @@
 # 여기서 주의해야 할 것은 박수 한 번 칠 때는 - 이며, 박수를 두 번 칠 때는 - - 가 아닌 -- 이다.
 
 
-result = []
-for i in range(1,int(input())+1):
-    clap = 0
-    for j in str(i):
-        if int(j) in [3,6,9]:
-        	    clap +=1
-    if clap > 0:
-        result.append('-' * clap)
-    else:
-        result.append(str(i))
-print(' '.join(result))
+
+N = int(input())
+
+for i in range(1, N+1) :
+    s = str(i)
+    cnt = 0
+    for c in s :
+        if c in '369' :
+            cnt += 1
+    print(s, end=' ') if cnt == 0 else print('-'*cnt, end=' ')
