@@ -7,3 +7,5 @@
 #### [파이썬04](/python/python04.md)
 
 #### [파이썬05](/python/python05.md)
+
+#### [파이썬06](/python/python06.md)
