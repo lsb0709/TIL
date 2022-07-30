@@ -12,4 +12,4 @@ A, B = input().split()
 A = A[::-1] # 역순으로 정렬
 B = B[::-1]
 
-print(max(A, B))
+print(max(A, B)) # 두 수중 큰 값 출력

@@ -19,4 +19,4 @@ C = int(input())
 result = list(str(A * B * C))
 
 for mul in range(0, 10):
-    print(result.count(mul))
+    print(result.count(str(mul)))
