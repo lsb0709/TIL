@@ -6,4 +6,4 @@ result = x
 for i in x:
     if i in 'a':
         result = result.replace(i, '')
-print(result)
+print(result)   
