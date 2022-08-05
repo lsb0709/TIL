@@ -9,3 +9,8 @@
 #### [파이썬05](/python/python05.md)
 
 #### [파이썬06](/python/python06.md)
+
+#### [파이썬07](/python/python07.md)
+
+#### [파이썬08](/python/python08.md)
+
