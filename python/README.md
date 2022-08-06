@@ -14,3 +14,7 @@
 
 #### [파이썬08](/python/python08.md)
 
+#### [자료구조01](/python/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B001.md)
+
+#### [자료구조02](/python/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B002.md)
+
