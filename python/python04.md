@@ -63,7 +63,7 @@ b = sorted(b)
 
 
 
-![python04-1](/Users/isangbaeg/Desktop/TIL/python/images/python04-1.png)
+![python04-1](images/python04-1.png)
 
 - 문법 앞에 is가 붙어 있으면 대부분 boolean(True / False) 로 출력
 
@@ -102,7 +102,7 @@ print('Title Title!'.istitle()) # 앞문자가 대문자인지?
 # True
 ```
 
-![python04-2](/Users/isangbaeg/Desktop/TIL/python/images/python04-2.png)
+![python04-2](images/python04-2.png)
 
 - .replace(old, new[,count])
   - 바꿀대상글자를새로운글자로바꿔서반환
@@ -180,7 +180,7 @@ print(msg.swapcase()) # 대문자 <-> 소문자
 
   [ 0,1,2,3,4,5 ]
 
-![python04-3](/Users/isangbaeg/Desktop/TIL/python/images/python04-3.png)
+![python04-3](images/python04-3.png)
 
 #### 값 추가 및 삭제
 
@@ -351,7 +351,7 @@ print(numbers, result)
 
 #### 세트 메서드
 
-![python04-4](/Users/isangbaeg/Desktop/TIL/python/images/python04-4.png)
+![python04-4](images/python04-4.png)
 
 ### 딕셔너리 (Dictionary)
 
@@ -372,7 +372,7 @@ students['홍길동']
 
 
 
-![python04-5](/Users/isangbaeg/Desktop/TIL/python/images/python04-5.png)
+![python04-5](images/python04-5.png)
 
 
 

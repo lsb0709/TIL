@@ -18,3 +18,16 @@
 
 #### [자료구조02](/python/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B002.md)
 
+#### [자료구조03](/python/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B003.md)
+
+#### [자료구조04](/python/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B004.md)
+
+#### [자료구조05](/python/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B005.md)
+
+#### [자료구조06](/python/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B006.md)
+
+#### [알고리즘01](/python/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%9801.md)
+
+#### [알고리즘02](/python/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%9802.md)
+
+
