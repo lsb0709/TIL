@@ -11,4 +11,3 @@ second = (sum % 60)
 
 print(minute)
 print(second)
-
