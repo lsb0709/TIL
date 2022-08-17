@@ -2,16 +2,16 @@
 
 
 
-- Table suers 생성
+- Table users 생성
 
   ```sqlite
   CREATE TABLE users (
-  	first_name TEXT NOT NULL,
-    last_name TEXT NOT NULL,
-    age INTEGER NOT NULL,
-    country TEXT NOT NULL,
-    phone TEXT NOT NULL,
-    balanec INTEGER NOT NULL
+  	  first_name TEXT NOT NULL,
+      last_name TEXT NOT NULL,
+      age INTEGER NOT NULL,
+      country TEXT NOT NULL,
+      phone TEXT NOT NULL,
+      balanec INTEGER NOT NULL
   );
   ```
 
