@@ -192,8 +192,8 @@ SELECT COUNT(*) FROM healthcare;
 ```
 
 ```
--- COUNT(*)
--- 1000000
+COUNT(*)
+1000000
 ```
 
 ### 2. 연령 코드(age)의 최대, 최소 값을 모두 출력하시오. 
@@ -203,8 +203,8 @@ SELECT MAX(age), MIN(age) FROM healthcare;
 ```
 
 ```
--- MAX(age)	  MIN(age)
---   18	        9
+MAX(age)	MIN(age)
+18	        9
 ```
 
 ### 3. 신장(height)과 체중(weight)의 최대, 최소 값을 모두 출력하시오.
@@ -214,8 +214,8 @@ SELECT MAX(height), MAX(weight), MIN(height), MIN(weight) FROM healthcare;
 ```
 
 ```
--- MAX(height)	MAX(weight)	MIN(height)	MIN(weight)
--- 195	        135	        130	        30
+MAX(height)	MAX(weight)	MIN(height)	MIN(weight)
+195	        135	        130	        30
 ```
 
 ### 4. 신장(height)이 160이상 170이하인 사람은 몇 명인지 출력하시오.
@@ -225,8 +225,8 @@ SELECT COUNT(sido) FROM healthcare WHERE 160 <= height and height <= 170;
 ```
 
 ```
--- COUNT(sido)
--- 516930
+COUNT(sido)
+516930
 ```
 
 ### 5. 음주(is_drinking)를 하는 사람(1)의 허리 둘레(waist)를 높은 순으로 5명 출력하시오. 
@@ -236,12 +236,12 @@ SELECT waist, is_drinking FROM healthcare WHERE is_drinking = 1 ORDER BY waist A
 ```
 
 ```
--- waist	is_drinking
--- 5.8	        1
--- 8.2	        1
--- 8.7	        1
--- 41.0	        1
--- 49.0	        1
+waist	is_drinking
+5.8	        1
+8.2	        1
+8.7	        1
+41.0	    1
+49.0	    1
 ```
 
 ### 6. 시력 양쪽(va_left, va_right)이 1.5이상이면서 음주(is_drinking)를 하는 사람의 수를 출력하시오.
@@ -285,7 +285,7 @@ SELECT AVG(waist) FROM healthcare WHERE blood_pressure >= 140;
 
 ```
 AVG(height)				AVG(weight)
-167.452735422145	69.7131620222875
+167.452735422145	    69.7131620222875
 ```
 
 ### 10. 키가 가장 큰 사람 중에 두번째로 무거운 사람의 id와 키(height), 몸무게(weight)를 출력하시오.
@@ -296,7 +296,7 @@ SELECT id, height, weight FROM healthcare ORDER BY height DESC, weight DESC LIMI
 
 ```
 id			height	weight
-836005	195			110
+836005	    195		110
 ```
 
 ### 11. BMI가 30이상인 사람의 수를 출력하시오. 
@@ -325,10 +325,10 @@ SELECT id, weight / ((height / 100) * (height / 100)) as BMI FROM healthcare WHE
 ```
 id			BMI
 99120		135
-100174	135
-142639	135
-172459	135
-239321	135
+100174	    135
+142639	    135
+172459	    135
+239321	    135
 ```
 
 ### 13. 자유롭게 쿼리를 작성해주시고, 결과와 함께 공유해주세요.
@@ -338,12 +338,12 @@ SELECT id, height FROM healthcare ORDER BY height ASC, weight ASC LIMIT 5 OFFSET
 ```
 
 ```
--- id	    height
--- 78640	130
--- 155732	130
--- 156645	130
--- 158262	130
--- 190817	130
+id	    height
+78640	130
+155732	130
+156645	130
+158262	130
+190817	130
 ```
 
 ### 14. 자유롭게 쿼리를 작성해주시고, 결과와 함께 공유해주세요.
@@ -354,16 +354,17 @@ SELECT gender, age FROM healthcare WHERE gender = 1 and age > 17 LIMIT 1;
 
 ```
 gender	age
-1				18
+1		18
 ```
 
 ### 15. 자유롭게 쿼리를 작성해주시고, 결과와 함께 공유해주세요.
 
 ```sql
+SELECT * FROM healthcare WHERE age > 15 and height > 180 and weight > 80;
 ```
 
 ```
 id			sido	gender	age	height	weight		waist		va_left	va_right	blood_pressure	smoking		is_drinking
-565978	47			1			16	185				100			113.0		0.7			0.3						110						2							1
-574661	11			1			16	185				85			96.0		0.5			0.5						122						1							0
+565978	    47		1	    16	185		100			113.0		0.7		0.3			110				2			1
+574661	    11		1	    16	185		85			96.0		0.5		0.5			122				1			0
 ```
