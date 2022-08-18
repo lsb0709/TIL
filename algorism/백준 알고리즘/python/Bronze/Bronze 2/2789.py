@@ -9,5 +9,13 @@
 
 # 이렇게, 어떤 단어가 주어졌을 때, 검열을 거친 후에는 어떤 단어가 되는지 구하는 프로그램을 작성하시오.
 
-A = ['C','A','M','B','R','I','D','G','E']
+A = "CAMBRIDGE"
+S = list(input())
+for i in A:
+    for j in range(len(S)):
+        if i == S[j]:
+            S[j] =''
+for i in S:
+    print(i, end='')
 
+            
