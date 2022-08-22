@@ -2,8 +2,9 @@ matrix = []
 length = []
 
 for _ in range(5):
-    matrix.append(input())
-    length.append(len(matrix))
+    word = input()
+    matrix.append(word)
+    length.append(len(word))
 
 result = ''
 
