@@ -61,8 +61,10 @@
 
 - 데이터베이스 조작(Database API)
 
-  ```sqlite
+  ```python
+  # 모든 객체 조회
   Genre.objects.all()
+  (class이름.objects)
   
   Class Name.Manager.QuerySet API
   ```
@@ -73,12 +75,18 @@
 
 
 
+- Python manage.py shell-plus 명령어
+  - Django ORM 엑세스
+  - Create,Read,Update,Delete 등을 바로 적용, 테스트 해 볼 수 있다.
+
+
+
 - Create
 
   ```python
   # 1. create 메서드 활용
   Genre.obects.create(name='발라드')
-  
+  (class이름)
   # 2. 인스턴스 조작
   genre = Genre()
   genre.name = '인디밴드'

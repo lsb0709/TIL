@@ -4,11 +4,19 @@ from django.db import models
 # models.Model 내부 클래스를 상속 받는다. 
 # 왜 상속 받을까요? 기능들을 활용하고 싶어서. (미리 만들어진)
 class Genre(models.Model):
-    name = models.CharField(max_length=30)
+    name = models.CharField(max_length=30, null=True)
 
 class Artist(models.Model):
-    name = models.CharField(max_length=30)
+    name = models.CharField(max_length=30, null=True)
     debut = models.DateField()
+
+class Director(models.Model):
+    name = models.TextField()
+    debut = models.DateTimeField()
+    country = models.TextField()
+
+class Genre(models.Model):
+    title = models.TextField(null=True)
 
 
 
@@ -21,3 +29,4 @@ class Artist(models.Model):
 # iu = Person() 
 # # iu의 name 속성으로 아이유라고 하는 코드는?
 # iu.name = '아이유'
+
