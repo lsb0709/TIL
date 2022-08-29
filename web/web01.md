@@ -320,7 +320,7 @@
 
     해당 태그에 직접 style 속성을 활용
 
-- 내부 참조(embedding) - <style>
+- 내부 참조(embedding) - style
 
   - ```html
     <style>
@@ -331,7 +331,7 @@
     </style>
     ```
 
-    <head> 태그 내에 <style>에 지정
+    head 태그 내에 style에 지정
 
 - 외부참조(link file) - 분리된 CSS 파일
 
@@ -341,7 +341,7 @@
     </head>
     ```
 
-    외부 CSS 파일을 <head> 내 <link>를 통해 불러오기
+    외부 CSS 파일을 head 내 link 를 통해 불러오기
 
 
 
@@ -443,3 +443,4 @@
   ```
 
   style > id > class > type 순으로 우선순위가 높음
+
