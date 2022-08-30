@@ -1,0 +1,41 @@
+/* 아래에 CSS를 작성해주세요. */
+.h2 {
+    text-align: center;
+}
+
+.h2 span {
+    font-size: 12px;
+}
+
+  .total-card {
+    width: 900px;
+    margin: auto;
+  
+  }
+  .card{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 300px;
+    border-radius: 20px;
+    padding: 7px;
+  }
+  
+  .text{
+    margin: 0 1em;
+    text-align: left;
+  }
+  .small{
+    font-size: 12px;
+    color: gray;
+  }
+
+
+  .name{
+    font-size: 16px;
+    margin-top: 3px;
+  }
+  .content{
+    font-size: 9px;
+    color: hsl(0,0%,60%);
+    margin-top: 8px;
+  }
