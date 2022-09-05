@@ -30,34 +30,34 @@
 
   ```html
   <body>
-    	<table>
-      		<thead>
-            	<tr>
-                	<th>ID</th>
-                	<th>Name</th>
-                	<th>Major</th>
-            	</tr>
-        	</thead>
-        	<tbody>
-            	<tr>
-                	<td>1</td>
-                	<td>홍길동</td>
-                	<td>Computer Science</td>
-            	</tr>
-            	<tr>
-                	<td>2</td>
-                	<td>김철수</td>
-                	<td>Business</td>
-            	</tr>
-        	</tbody>
-        	<tfooter>
-            	<tr>
+    <table>
+      	<thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Major</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>홍길동</td>
+                <td>Computer Science</td>
+            </tr>
+            <tr>
+            	<td>2</td>
+            	<td>김철수</td>
+            	<td>Business</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
                 <td>총계</td>
                 <td colspan="2">2명</td>
-            	</tr>
-        	</tfooter>
-        	<caption>1반 학생 명단</caption>
-    	</table>
+            </tr>
+        </tfoot>
+        <caption>1반 학생 명단</caption>
+    </table>
   </body>
   ```
 
@@ -177,19 +177,26 @@
   - radio : 단일 선택
 
   ```html
-  <div>
-    <p>checkbox</p>
-    <input id="html" type="checkbox" name="language" value="html">
-    <label for="html">HTML</label>
-    <input id="python" type="checkbox" name="language" value="python">
-    <label for="python">파이썬</label>
-    <input id="python" type="checkbox" name="language" value="java">
-    <label for="java">자바</label>
-    <hr>
-  </div>
+<div>
+  <p>checkbox</p>
+  <input id="html" type="checkbox" name="language" value="html">
+  <label for="html">HTML</label>
+  <input id="python" type="checkbox" name="language" value="python">
+  <label for="python">파이썬</label>
+  <input id="java" type="checkbox" name="language" value="java">
+  <label for="java">자바</label>
+  <hr>
+  <p>radio button</p>
+  <input id="행복" type="radio" name="language" value="행복">
+  <label for="행복">행복</label>
+  <input id="슬픔" type="radio" name="language" value="슬픔">
+  <label for="슬픔">슬픔</label>
+  <input id="중립" type="radio" name="language" value="중립">
+  <label for="중립">중립</label>
+</div>
   ```
 
-    ![web05-4](/web/images/web05-4.png)
+![web05-4](/web/images/web05-4.png)
 
 
 
