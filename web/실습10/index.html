@@ -431,12 +431,40 @@
                     </svg>
                 </div>
             </div>
-        </div>
-        <div class="text-center">
+
+        <div class="text-center mb-5">
             <h2 class="fw-bolder">Get in touch</h2>
             <p>We'd love to hear from you</p>
         </div>
+            <div class="row gx-5 justify-content-center">
+                <form class="col-lg-6">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name..." data-sb-validations="required" data-sb-can-submit="no">
+                        <label for="name">Full name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" data-sb-can-submit="no">
+                        <label for="email">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" data-sb-can-submit="no">
+                        <label for="phone">Phone number</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required" data-sb-can-submit="no"></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                    <div class="d-grid"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
+                </form>
+            </div>
+        </div>
     </section>
+
+    <!-- Footer-->
+    <footer class="mt-5 py-5 bg-black text-center text-white">
+        <p class="mb-0">Copyright © Your Website 2022</p>
+    </footer>
 
 
     <!-- JavaScript Bundle with Popper -->
