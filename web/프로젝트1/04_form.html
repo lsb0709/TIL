@@ -68,84 +68,31 @@
         </div>
     </nav>
 
-    <!-- aside -->
-    <h1 class="text-center my-5">Community</h1>
-    <div class="container d-flex">
-        <aside>
-            <div class="card me-4" style="width: 10rem">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item text-primary">Boxoffice</li>
-                  <li class="list-group-item text-primary">Moives</li>
-                  <li class="list-group-item text-primary">Genres</li>
-                  <li class="list-group-item text-primary">Actors</li>
-                </ul>
-              </div>
-        </aside>
-    
-        <!-- Section -->
-        <section style="width:90%">
-            <table class="table table-striped">
-                <thead>
-                    <tr class="fw-bolder bg-black text-white">
-                        <th scope="col">영화제목</th>
-                        <th scope="col">글 제목</th>
-                        <th scope="col">작성자</th>
-                        <th scope="col">작성 시간</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="row">Great Movie title</th>
-                        <td>Best Movie Ever</td>
-                        <td>user</td>
-                        <td>1 minute ago</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Great Movie title</th>
-                        <td>Movie Test</td>
-                        <td>user</td>
-                        <td>1 minute ago</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Great Movie title</th>
-                        <td>Movie Test</td>
-                        <td>user</td>
-                        <td>1 minute ago</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Great Movie title</th>
-                        <td>Movie Test</td>
-                        <td>user</td>
-                        <td>1 minute ago</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Great Movie title</th>
-                        <td>Movie Test</td>
-                        <td>user</td>
-                        <td>1 minute ago</td>
-                    </tr>
-                    </tbody>
-                </table>
-        </section>
+    <!-- form -->
+    <div class="container">
+        <h1 class="text-center my-3">리뷰 작성하기</h1>
+        <select class="form-select" aria-label="Default select example">
+            <option selected>영화 선택하기</option>
+            <option value="1">쇼생크 탈출</option>
+            <option value="2">죽은 시인의 사회</option>
+            <option value="3">다크나이트 라이즈</option>
+            <option value="3">her</option>
+            <option value="3">위대한 쇼맨</option>
+        </select>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label mt-3">리뷰 제목</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="리뷰를 작성해주세요.">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label mt-3">리뷰 내용</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </div>
 
-    <!--  form move button -->
-    <div class="container text-end mt-2">
-        <a type="button" class="btn btn-outline-dark" href="./04_form.html">글쓰기</a>
-    </div>
-    <!-- pagination-->
-    <nav aria-label="Page navigation example">
-        <ul class="pagination my-5 justify-content-center align-content-center">
-            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-        </ul>
-    </nav>
     <!-- footer-->
     <footer class="text-center p-4">
-        <p class="mb-0">Web-bootstrap PJT, by ____</p>
+      <p class="mb-0">Web-bootstrap PJT, by ____</p>
     </footer>
 
 
