@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .password-box{
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="button" value="뒤로가기" onclick="history.back()">
+        <div class="password-box">
+            <input type="password" name="password" id="password">
+            <input type="password" name="password_confirmation" id="password_confirmation">
+            <input type="button" onclick="test()" value="일치여부확인">
+        </div>
+    </form>
+
+    <script>
+        function test() {
+            const passwordInput = document.getElementById('password').value
+            const passwordInput_confirmation = document.getElementById('password_confirmation').value
+
+            if(passwordInput.length < 8) {
+                    alert("비밀번호는 8자리 이상이여야 합니다.")
+                    return false
+                }
+                
+                if(passwordInput != passwordInput_confirmation) {
+                    alert("비밀번호가 일치하지 않습니다.")
+                    return false
+                }else {
+                    alert("비밀번호가 일치합니다.")
+                    return true
+                }
+        }
+    </script>
+</body>
+</html>
