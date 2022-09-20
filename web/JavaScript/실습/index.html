@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로젝트</title>
+    <style>
+        .container {
+            display: flex;
+        }
+        .ball {
+            width: 10rem;
+            height: 10rem;
+            margin: .8rem;
+            border-radius: 50%;
+            background-color: antiquewhite;
+            display: flex;
+            align-items: center;
+            justify-content: center;            
+            font-weight: bolder;
+            font-size:xx-large;
+        }
+    </style>
+</head>
+<body>
+    <h1>로또 추천 번호</h1>
+    <button id="lotto-btn">행운 번호 받기</button>
+    <div id="result"></div>
+    <!-- <div class="container">
+        <div class="ball">5</div>
+        <div class="ball">5</div>
+        <div class="ball">5</div>
+        <div class="ball">5</div>
+        <div class="ball">5</div>
+        <div class="ball">5</div>
+    </div> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script>
+        const lotto = [];
+        while (lotto.length < 6) {
+            const num = _.sampleSize(_.range(1, 46), 6)
+            if (lotto.indexOf(num) == -1) {
+                lotto.push(num);
+            }
+        }
+        lotto.sort((a,b)=>a-b);
+
+        const button = document.querySelector('#lotto-btn')
+        button.addEventListener('click', function() {
+            // 컨테이너 만들기
+            const container = document.createElement('div')
+            container.classList.add('container')
+            // 공 만들기 (6개)
+            const numbers = _.sampleSize(_.range(1, 46), 6)
+            const ball = document.createElement('div')
+            ball.classList.add('ball')
+            ball.innerText = numbers[0]
+            ball.innerText = numbers[1]
+            
+
+            
+            
+            // 컨테이너에 붙이기
+            container.appendChild(ball)
+            // 컨테이너를 결과 영역에 붙이기
+            const result = document.querySelector('#result')
+            result.appendChild(container)
+        })
+    </script>
+</body>
+</html>
