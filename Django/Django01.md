@@ -21,7 +21,7 @@
 - 클라이언트는 주로 서버에 요청을 보내고 응답을 받는 역을 합니다.
 - 서버는 웹페이지, 사이트, 또는 앱을 저장하는 컴퓨터입니다. 클라이언트의 장비가 웹페이지에 접근하길 원할 때, 서버로부터 클라이언트의 장치로 사용자의 웹 브라우저에서 보여지기 위한 웹페이지의 사본이 다운로드 됩니다.
 
-<img src="/Users/isangbaeg/Desktop/TIL/Django/images/django1_01.png" alt="django1_01" style="zoom:50%;" />
+![django1_01](/Django/images/django1_01.png)
 
 - **인터넷 연결**: 여러분이 웹에서 데이터를 보내고 받을 수 있게 해줍니다. 기본적으로 여러분의 집과 상점 사이의 거리와 같습니다.
 
@@ -56,7 +56,7 @@
 - 서버는 사용자가 요청(Request)에 해당하는 저장된 웹 페이지를 보냄
 - 사용자는 서버에 저장된 데이터가 변경되지 않는 한 고정된 웹 페이지를 보게 됨
 
-<img src="/Users/isangbaeg/Desktop/TIL/Django/images/django1_02.png" alt="django1_02" style="zoom:50%;" />
+![django1_02](/Django/images/django1_02.png)
 
 #### 동적 웹 페이지(Dynamic Web Page)
 
@@ -64,13 +64,13 @@
 - 서버는 사용자의 요청(Request)을 해석하여 데이터를 가공한 후 생성되는 웹 페이지를 보냄
 - 사용자는 상황, 시간, 요청 등에 따라 달라지는 웹 페이지를 보게 됨
 
-<img src="/Users/isangbaeg/Desktop/TIL/Django/images/django1_03.png" alt="django1_03" style="zoom:50%;" />
+![django1_03](/Django/images/django1_03.png)
 
 
 
 #### 정적 웹 페이지 VS 동적 웹 페이지
 
-<img src="/Users/isangbaeg/Desktop/TIL/Django/images/django1_04.png" alt="django1_04" style="zoom:50%;" />
+![django1_04](/Django/images/django1_04.png)
 
 - 정적 웹 페이지 장점
   - 빠르다 : 요청에 대한 파일만 전송하면 되기 때문에 추가적인 작업이 없음
@@ -122,7 +122,7 @@
 
 #### 요청(Request)와 응답(Response)로 구성
 
-<img src="/Users/isangbaeg/Desktop/TIL/Django/images/django1_05.png" alt="django1_05" style="zoom:50%;" />
+![django1_05](/Django/images/django1_05.png)
 
 ```makefile
 메세지 교환 형태의 프로토콜 
@@ -258,6 +258,8 @@ Django는 Python에서 가장 많이 사용하는 웹 프레임워크로 Spring 
 
 Django의 View로 URL요청이 들어오면 Model을 변경하고 Template에 주입하여 반환하던가, 그냥 API응답을 진행합니다.
 실제 개발은 Model과 View, Template을 정의하면 개발이 되는 것을 볼 수 있습니다. App을 정의하여 설정을 추가하고 Admin을 정의하여 관리자 페이지를 정의할 수 있습니다.(템플릿과 동작이 기본 제공됩니다)
-![img](https://velog.velcdn.com/images%2Fcouchcoding%2Fpost%2F3979fb5f-2ac9-43e4-a7b6-2f3af250e135%2Fimage.png)
 
 Django 폴더 구조
+
+![img](https://velog.velcdn.com/images%2Fcouchcoding%2Fpost%2F3979fb5f-2ac9-43e4-a7b6-2f3af250e135%2Fimage.png)
+
