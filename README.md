@@ -15,3 +15,5 @@
 * [web](./web/)
 
 * [javaScript](./web/JavaScript/)
+
+* [Django](./Django/)
