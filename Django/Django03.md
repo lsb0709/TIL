@@ -20,14 +20,14 @@
 
   2. vscode python formatting provider 설정
 
-     ![Untitled](/Users/isangbaeg/Desktop/TIL/Django/images/django3_01.png)
+     ![Untitled](/Django/images/django3_01.png)
 
   3. vscode format on save 체크
 
-     ![Untitled](/Users/isangbaeg/Desktop/TIL/Django/images/django3_02.png)
+     ![Untitled](/Django/images/django3_02.png)
 
   4. 파이썬 코드 수정 후 저장하기
 
   5. (위 설정으로 적용이 안되면) vscode **@id:editor.defaultFormatter @lang:python defaultFormatter 설정**
 
-     ![Untitled](/Users/isangbaeg/Desktop/TIL/Django/images/django3_03.png)
+     ![Untitled](/Django/images/django3_03.png)
