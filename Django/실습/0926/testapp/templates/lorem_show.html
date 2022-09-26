@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+    {%for lists in lorems%}
+    <p>
+        {%for word in lists%}
+        <span>{{ word }}</span>
+        {% endfor %}
+    </p>
+    <hr>
+    {% endfor %}
+</div>
+{% endblock%}
