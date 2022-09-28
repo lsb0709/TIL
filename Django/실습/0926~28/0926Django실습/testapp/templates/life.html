@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content%}
+<div class="container">
+    <h2> 이름 입력 페이지</h2>
+    <label for="exampleDataList" class="form-label mt-5 mb-3">이름을 입력하세요</label>
+    <div>
+        <form action="/life_show" method="GET" class="mt-1">
+            <input class="form-control mb-3" type="text" name="name" list="datalistOptions" id="exampleDataList"
+                placeholder="Type to search...">
+            <input type="submit" value="전생 확인하기" class="btn btn-outline-primary">
+        </form>
+    </div>
+
+</div>
+{% endblock%}
