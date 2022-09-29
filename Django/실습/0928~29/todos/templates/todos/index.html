@@ -1,18 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
 <div class="container p-5 mt-5">
-    <form action="{% url 'posts:create' %}">
+    <form action="{% url 'todos:create' %}">
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing-sm">할 일</span>
-            <input type="text" id="" maxlength="80" class="form-control" aria-label="Sizing example input"
+            <input type="text" name="content" maxlength="80" class="form-control" aria-label="Sizing example input"
                 aria-describedby="inputGroup-sizing-sm">
         </div>
 
         <div class="input-group mb-3">
             <label class="input-group-text" for="inputGroupSelect01">우선 순위</label>
-            <select class="form-select" id="inputGroupSelect01">
-                <option selected>선택</option>
+            <select class="form-select" name="priority" id="inputGroupSelect01">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -28,10 +28,9 @@
         </div>
 
         <div class="d-grid gap-2">
-            <button type="submit" class="btn btn-outline-primary">할 일 추가</button>
+            <input class="btn btn-outline-primary" type="submit" value="할 일 추가">
         </div>
     </form>
-
     <table class="table mt-5">
         <thead>
             <tr>
@@ -45,32 +44,29 @@
             </tr>
         </thead>
         <tbody>
+            {% for todo in todos %}
             <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
+                {% if todo.completed %}
+                <td><del>{{ todo.priority }}</del></td>
+                <td><del>{{ todo.content }}</del></td>
+                <td><del>{{ todo.created_at }}</del></td>
+                <td><del>{{ todo.deadline }}</del></td>
+                <td><del>{{ todo.completed }}</del></td>
+                <td><a href="{%url 'todos:update' todo.pk %}">변경</a> </td>
+                <td><a href="{% url 'todos:delete' todo.pk %}">삭제</a></td>
+
+                {% else %}
+                <td>{{ todo.priority }} </td>
+                <td>{{ todo.content }}</td>
+                <td>{{ todo.created_at }}</td>
+                <td>{{ todo.deadline }}</td>
+                <td>{{ todo.completed }}</th>
+                <td><a href="{%url 'todos:update' todo.pk %}">변경</a> </td>
+                <td><a href="{% url 'todos:delete' todo.pk %}">삭제</a></td>
+                {% endif %}
             </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-            </tr>
+            {% endfor %}
         </tbody>
-    </table>
-    {% endblock %}
+
+</div>
+{% endblock %}
