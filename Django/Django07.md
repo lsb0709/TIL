@@ -77,6 +77,7 @@
       path("admin/", admin.site.urls),
       path("articles/", include("articles.urls")),
   ]
+  ```
 
 ### 기본 흐름
 
@@ -456,7 +457,7 @@ def index(request):
       context = {
           "article": article,
       }
-      return render(request, "articels/detail.html", context)
+      return render(request, "articles/detail.html", context)
   ```
 
 - detail.html 생성
@@ -490,7 +491,7 @@ def index(request):
 - url
 
   ```python
-  path("<int:pk>/", views.update, name="update"),
+  path("<int:pk>/update", views.update, name="update"),
   ```
 
 - detail.html(수정하기 버튼 생성)
@@ -574,10 +575,3 @@ def index(request):
       }
       return render(request, "articles/update.html", context)
   ```
-
-  
-
-
-
-
-
