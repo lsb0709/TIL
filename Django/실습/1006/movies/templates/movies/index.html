@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class='container'>
+    <table class="table mt-5">
+      <thead>
+        <tr>
+          <th scope="col">pk</th>
+          <th scope="col">영화 제목</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for movie in movies %}
+          <tr>
+            <th scope="row">{{ movie.pk }}</th>
+            <td>
+              <a class="text-decoration-none" href="{% url 'movies:detail' movie.pk %}">{{ movie.title }}</a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock content %}
