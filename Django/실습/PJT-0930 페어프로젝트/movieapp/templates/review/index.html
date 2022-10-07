@@ -1,0 +1,39 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="container">
+    <h1 class="mt-5 text-center">DC아웃사이드 영화갤러리</h1>
+    <div class="w-100 my-5">
+        <a href="{% url 'movieapp:new' %}">
+            <button type="button" class="btn btn-outline-primary w-100">글 작성</button>
+        </a>
+    </div>
+    <div class="main-board">
+        {% for movie in movies %}
+
+        <div class="shadow p-3 mb-1 bg-body rounded">
+            <div class="d-flex">
+                <div class="w-100">
+                    <a href="{% url 'movieapp:detail' movie.pk %}">
+                        <p>{{ movie.title}}</p>
+                        <p>{{movie.created_at|date:'Y-m-d' }}</p>
+                    </a>
+                </div>
+                <p class="hearting">
+                    {% if movie.hearted == True %}
+                    <a href="{% url 'movieapp:heart' movie.pk%}">
+                        <i style="color: red" class="fa-solid fa-heart"></i>
+                    </a>
+                    {% else %}
+                    <a href="{% url 'movieapp:heart' movie.pk%}">
+                        <i class="fa-regular fa-heart"></i>
+                    </a>
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
