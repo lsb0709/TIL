@@ -55,6 +55,7 @@ def update(request, pk):
     }
     return render(request, 'movies/update.html', context)
 
+@login_required
 def delete(request, pk):
     Movie.objects.get(pk=pk).delete()
     return redirect('movies:index')
