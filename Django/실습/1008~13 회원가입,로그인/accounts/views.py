@@ -1,10 +1,11 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
 from django.contrib.auth import get_user_model
 from django.contrib.auth import login as auth_login
 from django.contrib.auth import logout as auth_logout
+from django.contrib.auth import update_session_auth_hash
 # from django.contrib.auth.forms import UserCreationForm
-from .forms import CustomUserCreationForm
+from .forms import CustomUserCreationForm, CustomUserChangeForm
 
 # Create your views here.
 def signup(request):
@@ -13,7 +14,7 @@ def signup(request):
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             user = form.save() #ModelForm의 save 메서드의 리턴값은 해당 모델의 인스턴스다!
-            # 회원가입을 했더니 자동으로 로그인
+            # 회원가입 후 자동으로 로그인 
             auth_login(request, user) # 로그인 
             return redirect('movies:index')
 
@@ -53,5 +54,37 @@ def login(request):
     return render(request, 'accounts/login.html', context)
 
 def logout(request):
+    auth_logout(request)
+    return redirect('movies:index')
+
+def update(request):
+    if request.method == 'POST':
+        form = CustomUserChangeForm(request.POST, instance=request.user)
+        if form.is_valid():
+            form.save()
+            return redirect('accounts:profile', request.user.pk)
+    else:
+        form = CustomUserChangeForm(instance=request.user)
+    context = {
+        'form': form,
+    }
+    return render(request, 'accounts/update.html', context)
+
+def change_password(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            form.save()
+            update_session_auth_hash(request, form.user)
+            return redirect('movies:index')
+    else:
+        form = PasswordChangeForm(request.user)
+    context = {
+        'form':form,
+    }
+    return render(request, 'accounts/change_password.html', context)
+
+def delete(request):
+    request.user.delete()
     auth_logout(request)
     return redirect('movies:index')

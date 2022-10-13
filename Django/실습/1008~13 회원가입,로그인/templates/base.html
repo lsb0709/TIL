@@ -28,6 +28,9 @@
             <li class="nav-item">
               <a href="{% url 'movies:create' %}" class="nav-link">작성</a>
             </li>
+            <li class="nav-item">
+              <a href="{% url 'accounts:update' %}" class="nav-link">회원정보 수정</a>
+            </li>
           {% endif %}
           {% if request.user.is_authenticated %}
             <li class="nav-item">
