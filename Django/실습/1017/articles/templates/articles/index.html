@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <a class='text-decoration-none' href="{% url 'articles:create' %}">글 작성</a>
+  <table>
+    <thead>
+      <tr>
+        <th scope='col'>번호</th>
+        <th scope='col'>제목</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for article in articles %}
+        <tr>
+          <th scope="row">{{ article.id }}</th>
+          <td>
+            <a class="text-decoration-none" href="{% url 'articles:detail' article.pk %}">
+              {{ article.title}}
+            </a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock content %}
