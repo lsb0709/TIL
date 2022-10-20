@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+  <table class="table text-color mt-5">
+    <thead>
+      <tr>
+        <th scope="col">번호</th>
+        <th scope="col">아이디</th>
+        <th scope="col">이메일</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in users %}
+        <tr>
+          <td>
+            <a href="{% url 'accounts:detail' user.pk %}" style="color: rgb(228, 225, 246);">{{ user.pk }}</a>
+          </td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock content %}
