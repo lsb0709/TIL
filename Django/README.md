@@ -23,3 +23,5 @@
 #### [이미지 업로드](/Django/Django11.md)
 
 #### [A one-to-many relationship](/Django/Django12.md)
+
+#### [1:N (User - Comment)](/Django/Django13.md)

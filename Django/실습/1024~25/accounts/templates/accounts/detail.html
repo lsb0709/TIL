@@ -3,8 +3,25 @@
 {% block body %}
   <h1>{{ user.username }}님의 프로필</h1>
   <p>{{ user.email }}
-    |
     {{ user.full_name }}</p>
+  <p>팔로우 :
+    {{ user.followings.count }}
+    | 팔로워 :
+    {{ user.followers.count }}</p>
+
+  {% if request.user.is_authenticated%}
+    {% if request.user != user %}
+      <a href="{% url 'accounts:follow' user.pk %}">
+        {% if request.user in user.followers.all %}
+          <p class="btn btn-outline-danger">팔로우 취소</p>
+        {% else %}
+          <p class="btn btn-outline-success">팔로우</p>
+        {% endif %}
+      </a>
+    {% endif %}
+  {% else %}
+    <a href="{% url 'accounts:login' %}" class='my-3 btn btn-outline-secondary'>로그인이 필요합니다.</a>
+  {% endif %}
   <div class="row">
     <div class="col-6">
       <h3>작성한 글</h3>
