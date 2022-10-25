@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+{% block content %}
+
+  {% if request.resolver_match.url_name == 'signup' %}
+    <h1>Signup</h1>
+  {% else %}
+    <h1>Update</h1>
+  {% endif %}
+
+  <form action="" method='POST'>
+    {% csrf_token %}
+    {% bootstrap_form form %}
+
+    {% if request.resolver_match.url_name == 'signup' %}
+      {% bootstrap_button 'signup' %}
+    {% else %}
+      <a href="{% url 'accounts:change_password'%}" class='text-decoration-none'>비밀번호 변경</a>
+      {% bootstrap_button 'update' %}
+
+    {% endif %}
+  </form>
+
+{% endblock %}

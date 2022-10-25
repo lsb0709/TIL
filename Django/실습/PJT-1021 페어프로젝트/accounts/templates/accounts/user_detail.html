@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+
+  <h1>{{ user.username }}의 페이지
+  </h1>
+  <hr>
+
+  <p>first-name :
+    {{ user.last_name }}
+  </p>
+
+  <p>last-name :
+    {{ user.first_name }}
+  </p>
+
+  <p>email :
+    {{ user.email }}
+  </p>
+
+  <div class='my-5'>
+    <h2>작성한 글({{reviews|length}})</h2>
+    <hr>
+    {% for review in reviews %}
+      <div class="d-flex justify-content-between">
+        <p>{{ review.title }}</p>
+        <div class="d-flex">
+          <p class="mx-2">{{ review.created_at | date:'Y-m-d A f' }}</p>
+          <div>
+            <a class='btn btn-outline-dark btn-sm' href="{% url 'reviews:detail' review.pk %}">보기</a>
+          </div>
+        </div>
+      </div>
+      <hr>
+    {% endfor %}
+  </div>
+  <div class="my-5">
+    <h2>작성한 댓글({{comments|length}})</h2>
+    <hr>
+    {% for comment in comments %}
+      <div class="d-flex justify-content-between">
+        <p>{{ comment.content }}</p>
+        <div class="d-flex">
+          <p class="mx-2">{{ comment.created_at | date:'Y-m-d A f' }}</p>
+          <div>
+            <a class='btn btn-outline-dark btn-sm' href="{% url 'reviews:detail' comment.review_id %}">보기</a>
+          </div>
+        </div>
+      </div>
+      <hr>
+    {% endfor %}
+  </div>
+{% endblock content %}

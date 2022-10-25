@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+<h1 class="mt-5 text-center reviews-title">Review Community</h1>
+<div class="row justify-content-between">
+  <div class="row mt-5 col-9">
+    {% for review in reviews %}
+    <a href="{% url 'reviews:detail' review.pk %}" class="col-4 reviews-box">
+      <div class="text-center d-flex flex-column justify-content-center">
+        <h1 class="card-movie-name">{{ review.movie_name }}</h1>
+        <h2 class="card-titles">{{ review.title }}</h2>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+  <aside class="reviews-aside col-3 m-0 d-flex justify-content-center">
+    <div class="mt-5 text-light text-center">
+      <div class="reviews-user">
+        {% if request.user.is_authenticated %}
+          <a href="{% url 'accounts:detail' request.user.pk %}">
+          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-person-circle user-icon" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+          </svg>
+        </a>
+        <div class="m-0 my-3">
+          <p class="m-0 fw-bold fs-5">{{ request.user.username }}</p>
+          <p class="m-0">{{ request.user.email }}</p>
+        </div>
+        <a href="{% url 'accounts:update' %}" style="color: white;">수정</a>
+        <a href="" style="color: white;">탈퇴</a>
+        </div>
+      {% else %}
+      <p>로그인을 해주세요</p>
+      {% endif %}
+    </div>
+  </aside>
+</div>
+
+{% endblock %}

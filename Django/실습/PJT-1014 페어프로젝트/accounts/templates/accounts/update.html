@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+{% block content %}
+<h1>update</h1>
+<form action="" method="post">
+  {% csrf_token %}
+  {% bootstrap_form form %}
+  {% bootstrap_button button_type="submit" content="수정" %}
+</form>
+</form>
+<form action="{% url 'accounts:delete' request.user.pk %}" method="POST">
+  {% csrf_token %}
+  <button class="float-end btn btn-primary m-1">회원탈퇴</button>
+</form>
+
+{% endblock %}
