@@ -1,0 +1,10 @@
+.like-hover{
+    color: pink; 
+    border-color: pink;
+}
+
+.like-hover:hover{
+    background-color: pink;
+    color: white;
+    transition: all 0.1s;
+}

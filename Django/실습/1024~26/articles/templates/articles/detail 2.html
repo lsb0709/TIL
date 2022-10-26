@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block body %}
+  <h1>{{ article.title }}</h1>
+  <p>{{ article.pk }}번 게시글</p>
+  <h3>
+    <a href="{% url 'accounts:detail' article.user.pk %}">{{ article.user.username }}</a>
+  </h3>
+  <p>{{ article.created_at|date:"SHORT_DATETIME_FORMAT" }}
+    |
+    {{ article.updated_at|date:"y-m-d D" }}</p>
+  <p>{{ article.content }}
+  </p>
+  {% if article.image %}
+    <img src="{{ article.image.url }}" alt="{{ article.image }}" width="400" height="300">
+  {% endif %}
+
+  {% if request.user.is_authenticated %}
+    <a href="{% url 'articles:like' article.pk %}">
+      {% if request.user in article.like_users.all %}
+        <button class='btn btn-outline-danger'>좋아요</button>
+      {% else %}
+        <button class="btn btn-outline-secondary">좋아요 취소</button>
+      {% endif %}
+    </a>
+    <p class="my-3">👍
+      {{ article.like_users.count }}</p>
+  {% else %}
+    <a href="{% url 'accounts:login' %}" class='btn like-hover'>로그인이 필요합니다.</a>
+  {% endif %}
+
+  {% if request.user == article.user %}
+    <p>
+      <a href="{% url 'articles:update' article.pk %}">수정하기</a>
+    </p>
+  {% endif %}
+  <h4 class="my-3">댓글</h4>
+  {% if request.user.is_authenticated %}
+    <form action="{% url 'articles:comment_create' article.pk %}" method="POST">
+      {% csrf_token %}
+      {% bootstrap_form comment_form layout='inline'%}
+      <input type="submit" value="OK" class="btn btn-primary btn-md">
+    </form>
+  {% endif %}
+  <hr>
+  {% for comment in comments %}
+    <p>
+      {{ comment.user.username }}
+      |
+      {{ comment.content }}</p>
+    <hr>
+    {% empty %}
+    <p>댓글이 없어요 ㅠ_ㅠ</p>
+  {% endfor %}
+{% endblock %}
