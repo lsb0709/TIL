@@ -7,4 +7,6 @@ for num in numbers :
 
 self_numbers = numbers - remove_set  # set의 '-' 연산자로 차집합을 구함
 for self_num in sorted(self_numbers):  # sorted 함수로 정렬
+
+    
     print(self_num)
