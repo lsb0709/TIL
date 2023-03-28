@@ -1,7 +1,6 @@
 # Django 개발 환경(mac) 설정 가이드
 
 
-
 1. mkdir 파일이름(파일생성)
 
    ```bash
